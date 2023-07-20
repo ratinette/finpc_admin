@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+from platform import system
 import pymysql
 
 pymysql.install_as_MySQLdb()
@@ -26,8 +27,10 @@ SECRET_KEY = "django-insecure-5k_cs(1x@!^(d1ipo((6j+iq*hy4ndhlqsfcq5u)h81+ef0oe1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+if system().lower().startswith("linux"):
+    DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
