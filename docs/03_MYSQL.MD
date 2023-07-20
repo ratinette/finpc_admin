@@ -1,9 +1,15 @@
 # 03. MySQL 적용 
 
 ## 3.1. MySQL 드라이버 설치
-    
 ```bash
-pip install mysqlclient
+pip install pymysql
+```
+
+```python
+# settings.py
+import pymysql
+
+pymysql.install_as_MySQLdb()
 ```
 
 ## 3.2. settings.py 설정
@@ -34,16 +40,4 @@ app/migrations 에서 __init__.py 제외 삭제
 ```bash
 python manage.py makemigrations
 python manage.py migrate
-```
-
-## 3.5 MacOS Apple Silicon
-```bash
-pip install pymysql
-```
-
-```python
-# settings.py
-import pymysql
-
-pymysql.install_as_MySQLdb()
 ```
