@@ -5,7 +5,7 @@
 3. [Visual Studio Code 설치](https://code.visualstudio.com/download)
 4. [Visual Studio Code Python Extension 설치](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 5. [Visual Studio Code Git Extension 설치](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-
+6. Git 학습
 
 ## Django 프로젝트 만들기
 1. 가상환경 활성화
