@@ -6,5 +6,9 @@
 </head>
 <body>
 
+{% for p in posts %}
+  <h1>{{ p.title }}</h1>
+  <p>{{ p.content }}</p>
+{% endfor %}
 </body>
 </html>

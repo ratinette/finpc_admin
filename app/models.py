@@ -18,6 +18,9 @@ class BaseModel(models.Model):
     def get_updated_at(self):
         return self.updated_at
 
+    class Meta:
+        abstract = True
+
 
 class Board(BaseModel):
     title = models.CharField(max_length=50)
@@ -31,6 +34,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
     board = models.ForeignKey(Board, on_delete=models.CASCADE, related_name="posts")
+    like_count = models.IntegerField(default=0)
     likes = models.ManyToManyField(User, related_name="likes", blank=True, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
 
